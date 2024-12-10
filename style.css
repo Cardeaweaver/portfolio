@@ -1,0 +1,141 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #98b9d3;
+  color: #f5f1f1;
+}
+
+header {
+  background-color: #050c0f;
+  color: #f7f7f7;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Flexbox Container Setup */
+.container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.container > div {
+  background-color: #090b0c;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 2px 10px rgba(24, 7, 7, 0.068);
+  
+  flex: 1 1 300px;
+}
+
+h2 {
+  color: #518bc5;
+}
+
+img {
+  display:block ; /* Overrides float:left; for a better flexbox integration */
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px 0;
+}
+
+.footer {
+  background-color: #04090e;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container > div {
+    margin: 20px 0 ;
+  }
+
+
+  .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #418660;
+    border: none;
+    color: #020101;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    text-decoration: underline;
+    opacity: 1;
+
+    right: 0;
+  }
+
+  .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #418660;
+    border: none;
+    color: #020101;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+}
+
